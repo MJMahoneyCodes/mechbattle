@@ -9,10 +9,10 @@
 <body>
     <span style="width: 33%; float: left;">
         <div class="head" style="text-align: center;">
-            <img src="images/head.png" alt="head">
+            <img src="images/head.png" alt="head" onclick="toggleShow('headOptions')">
         </div>
         <div class="upperbody" style="text-align: center;">
-            <img src="images/upper-arm-torso-leg.png" alt="upper left arm">
+            <img src="images/upper-arm-torso-leg.png" alt="upper left arm" onclick="toggleShow('upperLeftArmOptions')">
             <img src="images/upper-arm-torso-leg.png" alt="upper chest">
             <img src="images/upper-arm-torso-leg.png" alt="upper right arm">
         </div>
@@ -34,5 +34,40 @@
             <img src="images/foot.png" alt="right foot">
         </div>
     </span>
+    <span style="width: 33%; position:absolute; margin-right:auto; margin-left:auto;">
+        <p>Click a body part to show options</p>
+        <ul style="list-style-type: none">
+            <div id="headOptions" style="display: none;">
+                <p>Head Options</p>
+                <input type="radio" id="headArmor" name="headOption" value="headArmor"><label for="headArmor">Additional Armor</label>
+                <input type="radio" id="headLaser" name="headOption" value="headLaser"><label for="headLaser">Laser</label>
+                <input type="radio" id="headMissile" name="headOption" value="headMissile"><label for="headMissile">Missile</label>
+                <input type="radio" id="headMachineGun" name="headOption" value="headMachineGun"><label for="headMachineGun">Machine Gun</label>
+            </div>
+            <div id="upperLeftArmOptions" style="display: none;">
+                <p>Upper Left Arm Options</p>
+                <input type="radio" id="ULAArmor" name="ULAOption" value="ULAArmor"><label for="ULAArmor">Additional Armor</label>
+                <input type="radio" id="ULALaser" name="ULAOption" value="ULALaser"><label for="ULALaser">Laser</label>
+                <input type="radio" id="ULAMissile" name="ULAOption" value="ULAMissile"><label for="ULAMissile">Missile</label>
+                <input type="radio" id="ULAMachineGun" name="ULAOption" value="ULAMachineGun"><label for="ULAMachineGun">Machine Gun</label>
+            </div>
+        </ul>
+    </span>
+    <span style="width: 33%; float:right;">
+        <p>
+            Here's where we'll show information
+        </p> 
+    </span>
+    <script>
+        //click on a body part to show its checkbox options
+        function toggleShow(box){
+            var itemToToggle = document.getElementById(box);
+            if (itemToToggle.style.display === "none") {
+                itemToToggle.style.display = "block";
+                } else {
+                    itemToToggle.style.display = "none";
+                }
+            }
+    </script>
 </body>
 </html>
