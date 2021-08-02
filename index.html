@@ -13,12 +13,12 @@
         </div>
         <div class="upperbody" style="text-align: center;">
             <img src="images/upper-arm-torso-leg.png" alt="upper left arm" onclick="toggleShow('upperLeftArmOptions')">
-            <img src="images/upper-arm-torso-leg.png" alt="upper chest">
-            <img src="images/upper-arm-torso-leg.png" alt="upper right arm">
+            <img src="images/upper-arm-torso-leg.png" alt="upper torso" onclick="toggleShow('upperTorsoOptions')">
+            <img src="images/upper-arm-torso-leg.png" alt="upper right arm" onclick="toggleshow('upperRightArmOptions')">
         </div>
         <div class="lowerbody" style="text-align: center;">
             <img src="images/lower-arm-torso-leg.png" alt="lower left arm">
-            <img src="images/lower-arm-torso-leg.png" alt="lower chest">
+            <img src="images/lower-arm-torso-leg.png" alt="lower torso">
             <img src="images/lower-arm-torso-leg.png" alt="lower right arm">
         </div>
         <div class="upperleg" style="text-align: center;">
@@ -51,6 +51,20 @@
                 <input type="radio" id="ULAMissile" name="ULAOption" value="ULAMissile"><label for="ULAMissile">Missile</label>
                 <input type="radio" id="ULAMachineGun" name="ULAOption" value="ULAMachineGun"><label for="ULAMachineGun">Machine Gun</label>
             </div>
+            <div id="upperTorsoOptions" style="display: none;">
+                <p>Upper Torso Options</p>
+                <input type="radio" id="ULAArmor" name="ULAOption" value="ULAArmor"><label for="ULAArmor">Additional Armor</label>
+                <input type="radio" id="ULALaser" name="ULAOption" value="ULALaser"><label for="ULALaser">Laser</label>
+                <input type="radio" id="ULAMissile" name="ULAOption" value="ULAMissile"><label for="ULAMissile">Missile</label>
+                <input type="radio" id="ULAMachineGun" name="ULAOption" value="ULAMachineGun"><label for="ULAMachineGun">Machine Gun</label>
+            </div>
+            <div id="upperRightArmOptions" style="display: none;">
+                <p>Upper Right Arm Options</p>
+                <input type="radio" id="ULAArmor" name="ULAOption" value="ULAArmor"><label for="ULAArmor">Additional Armor</label>
+                <input type="radio" id="ULALaser" name="ULAOption" value="ULALaser"><label for="ULALaser">Laser</label>
+                <input type="radio" id="ULAMissile" name="ULAOption" value="ULAMissile"><label for="ULAMissile">Missile</label>
+                <input type="radio" id="ULAMachineGun" name="ULAOption" value="ULAMachineGun"><label for="ULAMachineGun">Machine Gun</label>
+            </div>
         </ul>
     </span>
     <span style="width: 33%; float:right;">
@@ -62,7 +76,7 @@
         //click on a body part to show its checkbox options
         function toggleShow(box){
             var itemToToggle = document.getElementById(box);
-            if (itemToToggle.style.display === "none") {
+            if (itemToToggle.style.display == "none") {
                 itemToToggle.style.display = "block";
                 } else {
                     itemToToggle.style.display = "none";
